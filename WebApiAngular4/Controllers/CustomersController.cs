@@ -20,14 +20,12 @@ namespace WebApiAngular4.Controllers
             _context = context;
         }
 
-        // GET: api/Customers
         [HttpGet]
         public IEnumerable<Customer> GetCustomer()
         {
             return _context.Customer.Take(10);
         }
 
-        // GET: api/Customers/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCustomer([FromRoute] int id)
         {
@@ -46,7 +44,6 @@ namespace WebApiAngular4.Controllers
             return Ok(customer);
         }
 
-        // PUT: api/Customers/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCustomer([FromRoute] int id, [FromBody] Customer customer)
         {
@@ -81,7 +78,6 @@ namespace WebApiAngular4.Controllers
             return NoContent();
         }
 
-        // POST: api/Customers
         [HttpPost]
         public async Task<IActionResult> PostCustomer([FromBody] Customer customer)
         {
@@ -96,7 +92,6 @@ namespace WebApiAngular4.Controllers
             return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
         }
 
-        // DELETE: api/Customers/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer([FromRoute] int id)
         {
