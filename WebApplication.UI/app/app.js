@@ -1,11 +1,3 @@
 ﻿'use strict';
 
-var app = angular.module('app', [
-       // Angular modules 
-       'ngRoute'
-
-       // Custom modules 
-
-       // 3rd Party Modules
-
-]);
+var app = angular.module('app', ['ngRoute', 'common.services']);
