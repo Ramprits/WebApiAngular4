@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en-us" data-ng-app="app">
+<head>
+    <title>index</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/custom.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <section id="nav">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand navbar-link" href="#"><i class="glyphicon glyphicon-phone"></i>Dhanai Fruits Marts </a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active" role="presentation"><a [routerLink]="['/home']">Home </a></li>
+                        <li role="presentation"><a [routerLink]="['/customer']">Customer </a></li>
+                        <li role="presentation"><a [routerLink]="['/contact']">Contact </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    
+    <section id="content">
+        <div data- ng-include="'View/employeeList.html'"></div>
+    </section>
+
+
+    <section id="footer"></section>
+
+
+
+    <!-- Library Scripts -->
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/employeeService.js"></script>
+    <!-- Product Controllers -->
+    <script src="app/employee/employeeListCtrl.js"></script>
+</body>
+</html>
